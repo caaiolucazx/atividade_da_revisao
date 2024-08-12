@@ -1,0 +1,15 @@
+produtos = {}
+
+for i in range(5):
+    produto = input(f"\nDigite o nome do {i+1}º produto: ")
+    valor = float(input(f"\nDigite o valor do {produto} "))
+    produtos[produto] = valor
+
+valor_total = sum(produtos.values())
+
+print("\nA lista de compras foi:")
+for chave, valor in produtos.items():
+   print(f"{chave}, {valor:.2f}")
+
+print(f"\no valor total da compra foi de R${valor_total:.2f}")
+
